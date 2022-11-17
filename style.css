@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header h1{
+    text-align: center;
+    padding-top: 16px;
+}
+
+input.newtask{
+    font-size: 16px;
+    padding: 16px 16px;
+    width: 40%;
+    border-radius: 12px;
+    border: 2px solid gray;
+}
+
+input.newtask:hover{
+    border: 2px solid black;
+}
+
+button.newtask{
+    padding: 20px 16px 17px 16px;
+    margin-left: -5px;
+    border-radius: 12px;
+    border: 2px solid gray;
+    cursor: pointer;
+}
+
+button.newtask:hover{
+    background: black;
+    border: 2px solid black;
+    color:white;
+}
+
+.addNew{
+    padding: 20px 20px;
+    margin: 0 20px;
+}
+
+.list-group{
+    width: 50%;
+}
+
+.list-group-item{
+    border: 2px solid black;
+    cursor: pointer;
+    position: relative;
+}
+.list-group-item:hover{
+    color: white;
+    background: rgb(0, 174, 255);
+}
+
+.left{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-2{
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+i:hover{
+    color: red;
+}
