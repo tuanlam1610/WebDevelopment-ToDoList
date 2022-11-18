@@ -3,10 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 header h1{
-    text-align: center;
+    padding-left: 48px;
     padding-top: 16px;
 }
+
+input.edittask,
 input.search,
 input.newtask{
     font-size: 16px;
@@ -16,6 +19,7 @@ input.newtask{
     border: 2px solid gray;
 }
 
+input.edittask:hover,
 input.search:hover,
 input.newtask:hover{
     border: 2px solid black;
@@ -35,9 +39,9 @@ button.newtask{
 }
 
 button.newtask:hover{
-    background: black;
-    border: 2px solid black;
-    color:white;
+    background: rgb(147, 194, 215);
+    border: 2px solid green;
+    color:green;
 }
 
 .list-group{
@@ -46,40 +50,49 @@ button.newtask:hover{
 
 .list-group-item{
     border: 2px solid black;
-    cursor: pointer;
     position: relative;
 }
 .list-group-item + .list-group-item:hover{
     color: white;
-    background: rgb(0, 174, 255);
+    background: rgb(147, 194, 215);
 }
 
 .list-task > :first-child{
     text-align: center;
 }
 
-.left{
+main ul i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.left-1st{
+    font-size: 24px;
     position: absolute;
-    right: 16px;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.left-2{
+.left-2nd{
     position: absolute;
     right: 40px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-main ul i:hover{
-    color: red;
+.hover-red:hover{
+    color: rgb(213, 98, 98);
 }
 
-.Display{
-    display: none;
+.hover-yellow:hover{
+    color: rgb(246, 246, 109);
+}
+
+.hover-green:hover{
+    color: green;
 }
 
 main > button:hover{
-    background-color: rgb(216, 124, 124) !important;
+    background-color: rgb(213, 98, 98) !important;
 }

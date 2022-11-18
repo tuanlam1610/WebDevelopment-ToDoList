@@ -7,7 +7,7 @@ function add(e){
     const ul = document.querySelector("main ul.list-task")
     const newtask = document.createElement('li');
     newtask.className = 'list-group-item';
-    newtask.innerHTML = e.parentElement.children[0].value + '<i class="fa-solid fa-pen left-2"></i><i class="fa-solid fa-xmark left" onclick="deleteThis(this)"></i>'
+    newtask.innerHTML = e.parentElement.children[0].value + '<i class="fa-solid fa-pen left-2nd hover-yellow" onclick="edit(this)"></i><i class="fa-regular fa-circle-xmark left-1st hover-red" onclick="deleteThis(this)"></i>'
     e.parentElement.children[0].value = ""
     ul.insertAdjacentElement('beforeend',newtask)
 }
@@ -15,7 +15,12 @@ function add(e){
 function press(action, element){
     action.preventDefault();
     if(action.key === 'Enter' ){
-        add(element)
+        if (element.className === 'edittask'){
+            closeEdit(element)
+        }
+        else{
+            add(element)
+        }
     }
 }
 
