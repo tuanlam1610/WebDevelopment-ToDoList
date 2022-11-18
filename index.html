@@ -17,18 +17,25 @@
 <body>
     <header>
         <h1><i class="fa-solid fa-list"></i> ToDo List</h1>
-        <div class="addNew">
-            <input type="text" name="newtask" id="newtask" class="newtask" placeholder="Add new task...">
-            <button class="newtask">Add</button>
-        </div>
     </header>
     <main>
-        <ul class="list-group mx-5 my-2">
-            <li class="list-group-item">Active item<i class="fa-solid fa-pen left-2"></i><i class="fa-solid fa-xmark left"></i></li>
-            <li class="list-group-item">Item<i class="fa-solid fa-pen left-2"></i><i class="fa-solid fa-xmark left"></i></li>
-            <li class="list-group-item">Disabled item<i class="fa-solid fa-pen left-2"></i><i class="fa-solid fa-xmark left"></i></li>
+        <div class="addNew mx-5 my-4">
+          <input type="text" name="newtask" id="newtask" class="newtask" placeholder="Add new task..." onkeyup="press(event,this)">
+          <button class="newtask" onclick="add(this)"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="searchTask mx-5 my-4">
+          <input type="text" name="search" id="search" class="search" placeholder="Search task..." required onkeyup="search()">
+        </div>
+        <ul class="list-group list-task mx-5">
+            <li class="list-group-item list-group-item-primary"><h2>List task</h2></li>
+            <li class="list-group-item">Item<i class="fa-solid fa-pen left-2""></i><i class="fa-solid fa-xmark left" onclick="deleteThis(this)"></i></li>
+            <li class="list-group-item">Item<i class="fa-solid fa-pen left-2"></i><i class="fa-solid fa-xmark left" onclick="deleteThis(this)"></i></li>
+            <li class="list-group-item">Disabled item<i class="fa-solid fa-pen left-2"></i><i class="fa-solid fa-xmark left" onclick="deleteThis(this)"></i></li>
         </ul>
+
+        <button class="btn btn-primary mx-5 my-4" onclick="deleteAll(this)">Delete all tasks</i></button>
     </main>
+
     <footer>
     
     </footer>
@@ -40,4 +47,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+  <script src="edit.js"></script>
+  <script src="add.js"></script>
+  <script src="delete.js"></script>
 </body>

@@ -7,21 +7,27 @@ header h1{
     text-align: center;
     padding-top: 16px;
 }
-
+input.search,
 input.newtask{
     font-size: 16px;
-    padding: 16px 16px;
+    padding: 4px 16px;
     width: 40%;
     border-radius: 12px;
     border: 2px solid gray;
 }
 
+input.search:hover,
 input.newtask:hover{
     border: 2px solid black;
 }
 
+input.search{
+    margin-left: 2rem;
+    width: 25%;
+}
+
 button.newtask{
-    padding: 20px 16px 17px 16px;
+    padding: 4px 16px;
     margin-left: -5px;
     border-radius: 12px;
     border: 2px solid gray;
@@ -34,11 +40,6 @@ button.newtask:hover{
     color:white;
 }
 
-.addNew{
-    padding: 20px 20px;
-    margin: 0 20px;
-}
-
 .list-group{
     width: 50%;
 }
@@ -48,9 +49,13 @@ button.newtask:hover{
     cursor: pointer;
     position: relative;
 }
-.list-group-item:hover{
+.list-group-item + .list-group-item:hover{
     color: white;
     background: rgb(0, 174, 255);
+}
+
+.list-task > :first-child{
+    text-align: center;
 }
 
 .left{
@@ -67,6 +72,14 @@ button.newtask:hover{
     transform: translateY(-50%);
 }
 
-i:hover{
+main ul i:hover{
     color: red;
+}
+
+.Display{
+    display: none;
+}
+
+main > button:hover{
+    background-color: rgb(216, 124, 124) !important;
 }
